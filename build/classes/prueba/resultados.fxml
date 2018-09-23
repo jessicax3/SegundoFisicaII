@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="700.0" style="-fx-background-color: #4B0082;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prueba.ResultadosController">
+   <children>
+      <Pane prefHeight="490.0" prefWidth="700.0">
+         <children>
+            <ImageView fitHeight="514.0" fitWidth="675.0" layoutX="20.0" layoutY="-24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/wall2.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnVolver" layoutX="42.0" layoutY="432.0" mnemonicParsing="false" onAction="#accionBtnVolver" style="-fx-background-color: #1C9DB3;" text="Volver a simular" textAlignment="JUSTIFY">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" color="#0e5e68" height="154.43" radius="72.2675" spread="0.43" width="136.64" />
+               </effect>
+            </Button>
+            <Button fx:id="btnAnimacion" layoutX="551.0" layoutY="432.0" mnemonicParsing="false" onAction="#accionBtnAnimacion" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #1C9DB3;" text="Animación">
+               <effect>
+                  <DropShadow color="#15757c" height="62.51" radius="27.79" spread="0.41" width="50.65" />
+               </effect>
+            </Button>
+            <ImageView fitHeight="243.0" fitWidth="412.0" layoutX="68.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/res.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="229.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resultados: ">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="73.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resistencia eléctrica: ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="74.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Corriente eléctrica del alambre:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="300.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Potencia disipada: ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="300.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Energía consumida en 1 hr:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="33.0" fitWidth="29.0" layoutX="440.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/clock.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="re" layoutX="73.0" layoutY="130.0" text="Label" />
+            <Label fx:id="ce" layoutX="73.0" layoutY="210.0" text="Label" />
+            <Label fx:id="pd" layoutX="300.0" layoutY="122.0" text="Label" />
+            <Label fx:id="ec" layoutX="300.0" layoutY="210.0" text="Label" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

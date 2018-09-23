@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.ColorInput?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="700.0" style="-fx-background-color: #4B0082;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prueba.NextPageController">
+   <children>
+      <ImageView fitHeight="490.0" fitWidth="640.0" layoutX="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/wall2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="264.0" fitWidth="452.0" layoutX="61.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/res.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="35.0" layoutY="476.0" prefHeight="490.0" prefWidth="700.0">
+         <children>
+            <Text fill="#514e4e" layoutX="338.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="V" />
+         </children>
+         <effect>
+            <ColorInput />
+         </effect>
+      </Pane>
+      <Label layoutX="75.0" layoutY="75.0" text="Ingresa los valores:" textAlignment="JUSTIFY">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="116.0" text="Diámetro: ">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="txd" layoutX="147.0" layoutY="113.0" maxWidth="43.0" prefHeight="25.0" prefWidth="43.0" />
+      <Text fill="#434040" layoutX="201.0" layoutY="130.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="mm">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <Label layoutX="81.0" layoutY="157.0" text="Radio: ">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="txr" layoutX="147.0" layoutY="154.0" maxWidth="43.0" prefHeight="25.0" prefWidth="43.0" />
+      <Text fill="#393737" layoutX="200.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mm">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <Label layoutX="82.0" layoutY="195.0" text="Longitud: ">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextField fx:id="txl" layoutX="147.0" layoutY="192.0" maxWidth="43.0" prefHeight="25.0" prefWidth="43.0" />
+      <Text fill="#434040" layoutX="206.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="m">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <Label layoutX="86.0" layoutY="233.0" text="Voltaje: ">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="txv" layoutX="147.0" layoutY="232.0" maxWidth="43.0" prefHeight="25.0" prefWidth="43.0" />
+      <Text fill="#3c3b3b" layoutX="206.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="v">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <Label layoutX="76.0" layoutY="279.0" text="Tipo de metal: " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Button fx:id="btnSalir" layoutX="56.0" layoutY="441.0" mnemonicParsing="false" onAction="#btnSalirAction" text="Atrás" textFill="#bc0a0a">
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" color="#110465" radius="24.825" width="80.3" />
+         </effect>
+      </Button>
+      <Button fx:id="btnIngresar" layoutX="150.0" layoutY="334.0" mnemonicParsing="false" onAction="#btnAccionProcesarDatos" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #1C9DB3;" text="Enviar">
+         <effect>
+            <InnerShadow choke="0.21" color="#116b69" height="19.52" radius="13.337499999999999" width="35.83" />
+         </effect>
+      </Button>
+      <Button fx:id="btnBorrar" layoutX="86.0" layoutY="334.0" mnemonicParsing="false" onAction="#btnAccionEliminarValores" prefHeight="10.0" prefWidth="50.0" style="-fx-background-color: #1C9DB3;" text="Borrar">
+         <effect>
+            <InnerShadow blurType="TWO_PASS_BOX" choke="0.1" color="#116b69" height="41.76" radius="23.345" width="53.62" />
+         </effect>
+      </Button>
+      <ChoiceBox fx:id="choiceBox" layoutX="178.0" layoutY="277.0" prefHeight="25.0" prefWidth="88.0" />
+      <Text layoutX="296.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resistencia Eléctrica: " />
+      <Text layoutX="296.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Corriente eléctrica: " />
+      <Text layoutX="296.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Potencia Disipada: " />
+      <Text layoutX="296.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Energía consumida (1 hra):" />
+      <Text layoutX="296.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resultado:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblResult1" layoutX="407.0" layoutY="117.0" />
+      <Label fx:id="lblResult2" layoutX="401.0" layoutY="158.0" />
+      <Label fx:id="lblResult3" layoutX="401.0" layoutY="206.0" />
+      <Label fx:id="lblResult4" layoutX="296.0" layoutY="271.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="517.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/tubo.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="586.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblLo" layoutX="592.0" layoutY="184.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Text fill="WHITE" layoutX="612.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblA" layoutX="637.0" layoutY="81.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgView" fitHeight="159.0" fitWidth="229.0" layoutX="397.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/circuito.png" />
+         </image>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </ImageView>
+   </children>
+</AnchorPane>
